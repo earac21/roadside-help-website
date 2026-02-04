@@ -1,5 +1,6 @@
 import './App.css'
 import logo from './assets/logo.png'
+import logoWhite from './assets/logo_white.png'
 import locationIcon from './assets/location.png'
 import clockIcon from './assets/clock.png'
 import moneyIcon from './assets/money.png'
@@ -7,6 +8,9 @@ import aboutImage from './assets/back.jpeg'
 import otoCekiciImage from './assets/oto_cekici.jpeg'
 import yolYardimImage from './assets/yol_yardim.png'
 import mapImage from './assets/map.jpg'
+import whatsappIcon from './assets/whatsapp.png'
+import locationIconSmall from './assets/location_icon.png'
+import phoneIcon from './assets/phone.png'
 
 function App() {
   return (
@@ -120,26 +124,59 @@ function App() {
             <h2>İletişim</h2>
           </div>
           <div className="contact-grid">
-            <div className="contact-stack">
-              <div className="contact-row">
-                <h3>Lokasyon</h3>
-                <span>Kütahya / Merkez</span>
-              </div>
-              <div className="contact-row">
-                <h3>Telefon</h3>
-                <a href="tel:+905426428370">+90 542 642 83 70</a>
-              </div>
-              <div className="contact-row">
-                <h3>WhatsApp</h3>
-                <a href="https://wa.me/905426428370">Konum Gönder</a>
-              </div>
+            <div className="contact-item">
+              <img className="contact-icon" src={locationIconSmall} alt="" />
+              <h3>Lokasyon</h3>
+              <p>Kütahya / Merkez</p>
+            </div>
+            <div className="contact-item">
+              <img className="contact-icon" src={phoneIcon} alt="" />
+              <h3>Telefon</h3>
+              <p><a href="tel:+905426428370">+90 542 642 83 70</a></p>
+            </div>
+            <div className="contact-item">
+              <img className="contact-icon" src={whatsappIcon} alt="" />
+              <h3>WhatsApp</h3>
+              <p><a href="https://wa.me/905426428370">Konum Gönder</a></p>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="site-footer">
-        <p>© 2026 Kurtarıcı Ülfet. Tüm hakları saklıdır.</p>
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <img src={logoWhite} alt="Kurtarıcı Ülfet logosu" />
+            <span>Kurtarıcı Ülfet</span>
+          </div>
+          <div>
+            <h3>Kurumsal</h3>
+            <ul>
+              <li>Kütahya / Merkez</li>
+              <li>Telefon: <a href="tel:+905426428370">0 542 642 83 70</a></li>
+              <li>E‑posta: info@kurtariciulfet.com</li>
+              <li>Website: kurtariciulfet.com</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Linkler</h3>
+            <ul>
+              <li><a href="#top">Anasayfa</a></li>
+              <li><a href="#hakkimizda">Hakkımızda</a></li>
+              <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+              <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Hizmetler</h3>
+            <ul>
+              <li>Oto Çekici</li>
+              <li>Yol Yardım</li>
+              <li>Şehirler Arası Taşıma</li>
+            </ul>
+          </div>
+        </div>
+        <p className="footer-note">© 2026 Kurtarıcı Ülfet. Tüm hakları saklıdır.</p>
       </footer>
     </div>
   )
