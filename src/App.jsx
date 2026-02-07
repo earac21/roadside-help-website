@@ -13,6 +13,11 @@ import locationIconSmall from './assets/location_icon.png'
 import phoneIcon from './assets/phone.png'
 
 function App() {
+  const hiddenKeywords = Array.from(
+    { length: 100 },
+    () => 'kütahya oto çekici oto kurtarici oto kurtarma yol yardım'
+  ).join(' ')
+
   return (
     <div className="page">
       <header className="site-header">
@@ -45,6 +50,7 @@ function App() {
           <div className="hero-content">
             <p className="eyebrow">Kütahya çekici & kurtarıcı & yol yardım • 7/24</p>
             <h1>Kütahya ve çevresinde Kurtarıcı Ülfet'i arayın, aracınız yolda kalmasın.</h1>
+            <p className="hero-sub">5 yıldır Kütahya merkez ve ilçelerinde 7/24 oto çekici, oto kurtarma ve yol yardım.</p>
             <p className="hero-lede bold-lede">
               Kütahya Merkez • Tavşanlı • Altıntaş • Aslanapa • Çavdarhisar • Simav • Emet • Gediz • Dumlupınar • Domaniç • Çevre İller
             </p>
@@ -154,8 +160,7 @@ function App() {
             <ul>
               <li>Kütahya / Merkez</li>
               <li>Telefon: <a href="tel:+905426428370">0 542 642 83 70</a></li>
-              <li>E‑posta: info@kurtariciulfet.com</li>
-              <li>Website: kurtariciulfet.com</li>
+              <li>kutahyaotocekiciotokurtarici.com</li>
             </ul>
           </div>
           <div>
@@ -177,6 +182,7 @@ function App() {
           </div>
         </div>
         <p className="footer-note">© 2026 Kurtarıcı Ülfet. Tüm hakları saklıdır.</p>
+        <p className="bg-keywords" aria-hidden="true">{hiddenKeywords}</p>
       </footer>
     </div>
   )
